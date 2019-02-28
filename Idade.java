@@ -29,7 +29,6 @@ public class Idade {
 	}
 
 	public int calcularIdade(Date dataNascimento) {
-		System.out.println(dataNascimento);
 		GregorianCalendar dataHoje = new GregorianCalendar();
 		int diaAtual = 0, mesAtual = 0, anoAtual = 0; 
 		diaAtual = dataHoje.get(Calendar.DAY_OF_MONTH);
@@ -37,14 +36,9 @@ public class Idade {
 		anoAtual = dataHoje.get(Calendar.YEAR);
 		SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
 		String dtNasc = formatador.format(dataNascimento);
-		System.out.println("Data de Aniversario: " + dtNasc);
-		System.out.println("Data de Hoje: " + diaAtual + "/" + mesAtual + "/" + anoAtual);
 		String diaNasc = dtNasc.substring(0, 2);
 		String mesNasc = dtNasc.substring(3, 5);
 		String anoNasc = dtNasc.substring(6, 10);
-		System.out.println("Dia Nascimento: " + diaNasc);
-		System.out.println("Mes Nascimento: " + mesNasc);
-		System.out.println("Ano Nascimento: " + anoNasc);
 		int diaNascimento = Integer.parseInt(diaNasc);
 		int mesNascimento = Integer.parseInt(mesNasc);
 		int anoNascimento = Integer.parseInt(anoNasc);

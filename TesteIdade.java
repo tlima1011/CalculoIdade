@@ -12,7 +12,7 @@ import br.com.pesquisamercado.modelo.Idade;
 public class TesteIdade {
 
 	public static void main(String[] args) throws ParseException {
-		
+
 		Idade idade = new Idade();
 		Scanner scanner = new Scanner(System.in);
 		String dataNascimento;
@@ -20,6 +20,6 @@ public class TesteIdade {
 		dataNascimento = scanner.next();
 		Date date = new SimpleDateFormat("dd/MM/yyyy").parse(dataNascimento);
 		int idade1 = idade.calcularIdade(date);
-		System.out.println("Idade atual: " +idade1 +" anos de idade");
+		System.out.println("Idade: " + idade1 + " anos");
 	}
 }
