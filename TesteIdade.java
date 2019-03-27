@@ -20,6 +20,6 @@ public class TesteIdade {
 		dataNascimento = scanner.next();
 		Date date = new SimpleDateFormat("dd/MM/yyyy").parse(dataNascimento);
 		int idade1 = idade.calcularIdade(date);
-		System.out.println("Idade: " + idade1 + " anos");
+		System.out.println(idade1);
 	}
 }
