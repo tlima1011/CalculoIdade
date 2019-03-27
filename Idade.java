@@ -43,10 +43,14 @@ public class Idade {
 		int mesNascimento = Integer.parseInt(mesNasc);
 		int anoNascimento = Integer.parseInt(anoNasc);
 		idade = anoAtual - anoNascimento;
-		if (mesAtual < mesNascimento) {
-			idade--;
-		} else if(diaAtual < diaNascimento){
-			idade--;
+		if(mesAtual != mesNascimento) {
+			if(mesAtual < mesNascimento) {
+				idade--; 
+				return idade; 
+			}
+		}
+		else {
+			return idade;
 		}
 		return idade;
 	}
