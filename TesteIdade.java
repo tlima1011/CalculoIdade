@@ -2,19 +2,19 @@ public class TestaIdade {
 
     public static void main(String[] args) {
         
-            Scanner scan = new Scanner(System.in);
-            int idade = 0; 
-            
-            Idade id = new Idade();
-            
-            System.out.print("Digite uma data: ");
-            String dataNascimento = scan.nextLine();
-            //System.out.println(dataNascimento.length());
-            idade = id.calcularIdade(dataNascimento);           
-            System.out.println(idade);
-  
-     
-    }
-    
+           Scanner sc = new Scanner(System.in);
+
+		   SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+		    try {
+			    System.out.print("Informe a Data de Nascimento: ");
+                String nascimento = sc.nextLine();
+                Date dataNascimento = sdf.parse(nascimento);
+                System.out.println("Idade: " + Idade.calcularIdade(dataNascimento) + " anos.");
+            } catch (ParseException e) {
+                System.out.println("Formato de Data inválida (dd/MM/yyyy): " + e.getMessage());
+            }
+            sc.close();
+   } 
 }
 
